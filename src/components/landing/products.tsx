@@ -9,13 +9,13 @@ const products = [
   },
   {
     icon: <Briefcase className="h-8 w-8 text-primary" />,
-    title: "Pro Automation",
-    description: "Ideal for growing businesses that need advanced features, integrations, and scalability.",
+    title: "Asistente de Ventas",
+    description: "Deja que tus clientes sean atendidos por tu IA, mientras tú te enfocas en crecer.",
   },
   {
     icon: <Building className="h-8 w-8 text-primary" />,
-    title: "Enterprise Automation",
-    description: "Comprehensive solutions for large organizations requiring custom workflows and dedicated support.",
+    title: "Automatización Empresarial",
+    description: "Soluciones integrales para grandes organizaciones que requieren flujos de trabajo personalizados y soporte dedicado.",
   },
 ];
 
@@ -24,9 +24,9 @@ export function Products() {
     <section id="products" className="w-full py-20 sm:py-24">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">One Platform, Endless Possibilities</h2>
+          <h2 className="font-headline text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">Descubre nuestros productos y servicios</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            We offer tailored solutions to fit your business needs, no matter the size or industry.
+            Creamos soluciones con IA que son simples para ti, para ayudarte a cumplir tus objetivos.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
