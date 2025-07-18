@@ -8,7 +8,7 @@ const testimonials = [
     company: "Innovate Inc.",
     image: "https://placehold.co/100x100.png",
     aiHint: "woman portrait",
-    testimonial: "AutoSales has transformed our sales process. We've seen a 40% increase in productivity and our team can now focus on building relationships rather than manual data entry.",
+    testimonial: "Confia Digital has transformed our sales process. We've seen a 40% increase in productivity and our team can now focus on building relationships rather than manual data entry.",
   },
   {
     name: "Michael Chen",

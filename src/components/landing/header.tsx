@@ -27,7 +27,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <Rocket className="h-6 w-6 text-primary" />
-          <span className="font-headline text-xl font-bold">AutoSales</span>
+          <span className="font-headline text-xl font-bold">Confia Digital</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           <Link href="#products" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">

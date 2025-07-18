@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'AutoSales Landing',
+  title: 'Confia Digital Landing',
   description: 'Automate your business sales with our products.',
 };
 

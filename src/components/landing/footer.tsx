@@ -11,7 +11,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <Rocket className="h-7 w-7 text-primary" />
-              <span className="font-headline text-2xl font-bold">AutoSales</span>
+              <span className="font-headline text-2xl font-bold">Confia Digital</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Automate your sales and grow your business.
@@ -53,7 +53,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} AutoSales, Inc. All rights reserved.</p>
+          <p>&copy; {currentYear} Confia Digital, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
