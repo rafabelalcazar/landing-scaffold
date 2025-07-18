@@ -7,22 +7,23 @@ export function Hero() {
     <section className="relative w-full overflow-hidden bg-background">
       <div className="container relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
         <div className="max-w-3xl text-center mx-auto">
-          <p className="font-semibold text-primary">Automate. Accelerate. Achieve.</p>
-          <h1 className="font-headline mt-4 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Transform Your Sales with Intelligent Automation
-          </h1>
+          <p className="font-semibold text-primary">AAA</p>
+          <p className="font-semibold text-primary">Automatizar. Acelerar. Alcanzar.</p>
+          <h2 className="font-headline mt-4 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            Tecnología Simple para Organizar tu dinero y Vender más.
+          </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Stop wasting time on manual tasks. Our platform empowers your team to focus on what truly matters: closing deals and building relationships.
+            En ConfIA creamos asistentes y automatizaciones para personas y negocios que quieren crecer sin complicaciones.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button size="lg" asChild>
               <Link href="#pricing">
-                Choose Your Plan
+                Elige tu plan
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="#comparison">Compare Features</Link>
+              <Link href="#comparison">Compara</Link>
             </Button>
           </div>
         </div>

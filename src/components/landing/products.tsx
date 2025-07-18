@@ -4,8 +4,8 @@ import { Rocket, Briefcase, Building } from "lucide-react";
 const products = [
   {
     icon: <Rocket className="h-8 w-8 text-primary" />,
-    title: "Basic Automation",
-    description: "Perfect for startups and small teams looking to automate their essential sales tasks and workflows.",
+    title: "Mony",
+    description: "Mony es tu asistente financiero por WhatsApp.",
   },
   {
     icon: <Briefcase className="h-8 w-8 text-primary" />,
