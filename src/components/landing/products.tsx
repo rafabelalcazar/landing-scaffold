@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useRef, MouseEvent } from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Rocket, Briefcase, Building } from "lucide-react";
 
@@ -19,6 +22,40 @@ const products = [
   },
 ];
 
+const ProductCard = ({ product }: { product: (typeof products)[0] }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const onMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const { left, top, width, height } = cardRef.current.getBoundingClientRect();
+    const x = (e.clientX - left - width / 2) / (width / 2);
+    const y = (e.clientY - top - height / 2) / (height / 2);
+    cardRef.current.style.transform = `perspective(1000px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) scale3d(1.05, 1.05, 1.05)`;
+  };
+
+  const onMouseLeave = () => {
+    if (!cardRef.current) return;
+    cardRef.current.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)';
+  };
+
+  return (
+    <Card
+      ref={cardRef}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      className="text-center transition-transform duration-300 ease-out transform-style-3d hover:shadow-2xl"
+    >
+      <CardHeader className="items-center">
+        <div className="rounded-full bg-primary/10 p-4">
+          {product.icon}
+        </div>
+        <CardTitle className="font-headline text-xl pt-4">{product.title}</CardTitle>
+        <CardDescription className="pt-2">{product.description}</CardDescription>
+      </CardHeader>
+    </Card>
+  );
+};
+
 export function Products() {
   return (
     <section id="products" className="w-full py-20 sm:py-24">
@@ -31,15 +68,7 @@ export function Products() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {products.map((product) => (
-            <Card key={product.title} className="text-center transition-transform hover:scale-105 hover:shadow-lg">
-              <CardHeader className="items-center">
-                <div className="rounded-full bg-primary/10 p-4">
-                  {product.icon}
-                </div>
-                <CardTitle className="font-headline text-xl pt-4">{product.title}</CardTitle>
-                <CardDescription className="pt-2">{product.description}</CardDescription>
-              </CardHeader>
-            </Card>
+            <ProductCard key={product.title} product={product} />
           ))}
         </div>
       </div>

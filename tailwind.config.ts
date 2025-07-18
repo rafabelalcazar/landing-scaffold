@@ -1,5 +1,8 @@
 import type {Config} from 'tailwindcss';
 
+// A simple plugin to add transform-style: preserve-3d
+const plugin = require('tailwindcss/plugin')
+
 export default {
   darkMode: ['class'],
   content: [
@@ -105,5 +108,14 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    plugin(function({ addUtilities } : { addUtilities: any }) {
+      addUtilities({
+        '.transform-style-3d': {
+          'transform-style': 'preserve-3d',
+        },
+      })
+    }),
+  ],
 } satisfies Config;
