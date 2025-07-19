@@ -3,22 +3,26 @@
 import React, { useRef, MouseEvent } from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Rocket, Briefcase, Building } from "lucide-react";
+import Link from "next/link";
 
 const products = [
   {
     icon: <Rocket className="h-8 w-8 text-primary" />,
     title: "Mony",
     description: "Mony es tu asistente financiero por WhatsApp.",
+    href: "/mony",
   },
   {
     icon: <Briefcase className="h-8 w-8 text-primary" />,
     title: "Asistente de Ventas",
     description: "Deja que tus clientes sean atendidos por tu IA, mientras tú te enfocas en crecer.",
+    href: "#pricing",
   },
   {
     icon: <Building className="h-8 w-8 text-primary" />,
     title: "Automatización Empresarial",
     description: "Soluciones integrales para grandes organizaciones que requieren flujos de trabajo personalizados y soporte dedicado.",
+    href: "#contact",
   },
 ];
 
@@ -39,20 +43,22 @@ const ProductCard = ({ product }: { product: (typeof products)[0] }) => {
   };
 
   return (
-    <Card
-      ref={cardRef}
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
-      className="text-center transition-transform duration-300 ease-out transform-style-3d hover:shadow-2xl"
-    >
-      <CardHeader className="items-center">
-        <div className="rounded-full bg-primary/10 p-4">
-          {product.icon}
-        </div>
-        <CardTitle className="font-headline text-xl pt-4">{product.title}</CardTitle>
-        <CardDescription className="pt-2">{product.description}</CardDescription>
-      </CardHeader>
-    </Card>
+    <Link href={product.href} className="h-full">
+        <Card
+        ref={cardRef}
+        onMouseMove={onMouseMove}
+        onMouseLeave={onMouseLeave}
+        className="text-center transition-transform duration-300 ease-out transform-style-3d hover:shadow-2xl h-full flex flex-col"
+        >
+        <CardHeader className="items-center flex-1">
+            <div className="rounded-full bg-primary/10 p-4">
+            {product.icon}
+            </div>
+            <CardTitle className="font-headline text-xl pt-4">{product.title}</CardTitle>
+            <CardDescription className="pt-2">{product.description}</CardDescription>
+        </CardHeader>
+        </Card>
+    </Link>
   );
 };
 
