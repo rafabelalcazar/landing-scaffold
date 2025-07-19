@@ -20,18 +20,55 @@ const formSchema = z.object({
 });
 
 const countries = [
-    { value: "+57", label: "🇨🇴 +57" },
-    { value: "+52", label: "🇲🇽 +52" },
-    { value: "+1", label: "🇺🇸 +1" },
-    { value: "+54", label: "🇦🇷 +54" },
-    { value: "+34", label: "🇪🇸 +34" },
-    { value: "+51", label: "🇵🇪 +51" },
-    { value: "+56", label: "🇨🇱 +56" },
-    { value: "+55", label: "🇧🇷 +55" },
-    { value: "+58", label: "🇻🇪 +58" },
-    { value: "+593", label: "🇪🇨 +593" },
-    { value: "+506", label: "🇨🇷 +506" },
-  ];
+  { value: "+57", label: "🇨🇴 +57" },
+  { value: "+52", label: "🇲🇽 +52" },
+  { value: "+1", label: "🇺🇸 +1" },
+  { value: "+54", label: "🇦🇷 +54" }, // Argentina
+  { value: "+34", label: "🇪🇸 +34" }, // España
+  { value: "+51", label: "🇵🇪 +51" }, // Perú
+  { value: "+56", label: "🇨🇱 +56" }, // Chile
+  { value: "+55", label: "🇧🇷 +55" }, // Brasil
+  { value: "+58", label: "🇻🇪 +58" }, // Venezuela
+  { value: "+593", label: "🇪🇨 +593" }, // Ecuador
+  { value: "+506", label: "🇨🇷 +506" }, // Costa Rica
+  { value: "+591", label: "🇧🇴 +591" }, // Bolivia
+  { value: "+53", label: "🇨🇺 +53" }, // Cuba
+  { value: "+503", label: "🇸🇻 +503" }, // El Salvador
+  { value: "+502", label: "🇬🇹 +502" }, // Guatemala
+  { value: "+504", label: "🇭🇳 +504" }, // Honduras
+  { value: "+505", label: "🇳🇮 +505" }, // Nicaragua
+  { value: "+507", label: "🇵🇦 +507" }, // Panamá
+  { value: "+595", label: "🇵🇾 +595" }, // Paraguay
+  { value: "+598", label: "🇺🇾 +598" }, // Uruguay
+  // Países Europeos Importantes
+  { value: "+34", label: "🇪🇸 +34" }, // España
+  { value: "+44", label: "🇬🇧 +44" }, // Reino Unido
+  { value: "+49", label: "🇩🇪 +49" }, // Alemania
+  { value: "+33", label: "🇫🇷 +33" }, // Francia
+  { value: "+39", label: "🇮🇹 +39" }, // Italia
+  { value: "+7", label: "🇷🇺 +7" }, // Rusia (incluye Kazajistán)
+  { value: "+31", label: "🇳🇱 +31" }, // Países Bajos
+  { value: "+41", label: "🇨🇭 +41" }, // Suiza
+  { value: "+48", label: "🇵🇱 +48" }, // Polonia
+  { value: "+32", label: "🇧🇪 +32" }, // Bélgica
+  { value: "+43", label: "🇦🇹 +43" }, // Austria
+  { value: "+353", label: "🇮🇪 +353" }, // Irlanda
+  { value: "+46", label: "🇸🇪 +46" }, // Suecia
+  { value: "+45", label: "🇩🇰 +45" }, // Dinamarca
+  { value: "+358", label: "🇫🇮 +358" }, // Finlandia
+  { value: "+30", label: "🇬🇷 +30" }, // Grecia
+  { value: "+351", label: "🇵🇹 +351" }, // Portugal
+  // Países Asiáticos Importantes
+  { value: "+86", label: "🇨🇳 +86" }, // China
+  { value: "+91", label: "🇮🇳 +91" }, // India
+  { value: "+81", label: "🇯🇵 +81" }, // Japón
+  { value: "+82", label: "🇰🇷 +82" }, // Corea del Sur
+  { value: "+62", label: "🇮🇩 +62" }, // Indonesia
+  { value: "+65", label: "🇸🇬 +65" }, // Singapur
+  { value: "+966", label: "🇸🇦 +966" }, // Arabia Saudita
+  { value: "+63", label: "🇵🇭 +63" }, // Filipinas
+  { value: "+66", label: "🇹🇭 +66" }, // Tailandia
+];
 
 export function Contact() {
   const { toast } = useToast();
@@ -69,11 +106,11 @@ export function Contact() {
             Have questions or need a custom solution? Our team is here to help you succeed. Fill out the form, and we'll get back to you as soon as possible.
             </p> */}
             <div className="mt-8">
-              <Image 
-                src="https://placehold.co/600x400.png" 
-                alt="Contact us" 
-                width={600} 
-                height={400} 
+              <Image
+                src="https://placehold.co/600x400.png"
+                alt="Contact us"
+                width={600}
+                height={400}
                 className="rounded-lg object-cover"
                 data-ai-hint="office team"
               />
@@ -109,30 +146,30 @@ export function Contact() {
                   )}
                 />
                 <div className="flex gap-2">
-                <FormField
-                  control={form.control}
-                  name="country_code"
-                  render={({ field }) => (
-                    <FormItem className="w-1/3">
-                      <FormLabel>Código</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {countries.map((country) => (
-                            <SelectItem key={country.value} value={country.value}>
-                              {country.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                  <FormField
+                    control={form.control}
+                    name="country_code"
+                    render={({ field }) => (
+                      <FormItem className="w-1/3">
+                        <FormLabel>Código</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {countries.map((country) => (
+                              <SelectItem key={country.value} value={country.value}>
+                                {country.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                   <FormField
                     control={form.control}
                     name="telefono"
@@ -143,7 +180,7 @@ export function Contact() {
                           <Input placeholder="3001234567" {...field} />
                         </FormControl>
                         <FormMessage />
-                        </FormItem>
+                      </FormItem>
                     )}
                   />
                 </div>
