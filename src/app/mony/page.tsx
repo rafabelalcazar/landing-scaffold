@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, TrendingUp, PiggyBank, Wallet } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const features = [
   {
@@ -123,6 +124,31 @@ export default function MonyPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto max-w-5xl px-4">
+          <div className="text-center">
+            <h2 className="font-headline text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+              Conoce a tu Mentora
+            </h2>
+          </div>
+          <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3 items-center">
+              <div className="md:col-span-1 flex justify-center">
+                  <Avatar className="h-48 w-48">
+                      <AvatarImage src="https://placehold.co/300x300.png" alt="Valentina Cifuentes" data-ai-hint="woman portrait professional" />
+                      <AvatarFallback>VC</AvatarFallback>
+                  </Avatar>
+              </div>
+              <div className="md:col-span-2 text-center md:text-left">
+                  <h3 className="font-headline text-2xl font-bold text-foreground">Valentina Cifuentes</h3>
+                  <p className="text-md mt-1 font-semibold text-primary">Profesional en Finanzas</p>
+                  <blockquote className="mt-6 border-l-4 border-primary pl-4 italic text-muted-foreground">
+                      "Transformar tu relación con el dinero es el primer paso hacia la libertad financiera. Estoy aquí para guiarte en cada paso del camino, con herramientas simples y un acompañamiento cercano para que alcances tus metas."
+                  </blockquote>
+              </div>
           </div>
         </div>
       </section>
