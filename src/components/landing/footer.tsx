@@ -10,11 +10,16 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <Rocket className="h-7 w-7 text-primary" />
+              <img
+                src="https://raw.githubusercontent.com/rafabelalcazar/icons/refs/heads/main/Confia%20Digital%20-%20Rafael%20Belalcazar.png"
+                alt="Confia Digital"
+                className="h-7 w-7 rounded-sm object-cover"
+              />
+              {/* <Rocket className="h-7 w-7 text-primary" /> */}
               <span className="font-headline text-2xl font-bold">Confia Digital</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Automate your sales and grow your business.
+              Automatiza tus ventas y haz crecer tu negocio.
             </p>
             <div className="mt-6 flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-foreground">
@@ -29,7 +34,7 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-foreground">Products</h3>
+            <h3 className="font-semibold text-foreground">Productos</h3>
             <ul className="mt-4 space-y-2">
               <li><Link href="#products" className="text-sm text-muted-foreground hover:text-foreground">Features</Link></li>
               <li><Link href="#pricing" className="text-sm text-muted-foreground hover:text-foreground">Pricing</Link></li>
@@ -37,11 +42,11 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-foreground">Company</h3>
+            <h3 className="font-semibold text-foreground">Compañia</h3>
             <ul className="mt-4 space-y-2">
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">About Us</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Careers</Link></li>
-              <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-foreground">Contact</Link></li>
+              <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">Nosotros</Link></li>
+              {/* <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Careers</Link></li> */}
+              <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-foreground">Contacto</Link></li>
             </ul>
           </div>
           <div>
