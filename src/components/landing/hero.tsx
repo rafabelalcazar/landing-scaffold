@@ -7,8 +7,8 @@ export function Hero() {
     <section className="relative w-full overflow-hidden bg-background">
       <div className="container relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
         <div className="max-w-3xl text-center mx-auto">
-          <p className="font-semibold text-primary">AAA</p>
-          <p className="font-semibold text-primary">Automatizar. Acelerar. Alcanzar.</p>
+          {/* <p className="font-semibold text-primary">AAA</p> */}
+          {/* <p className="font-semibold text-primary">Automatizar. Acelerar. Alcanzar.</p> */}
           <h2 className="font-headline mt-4 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Tecnología Simple para Organizar tu dinero y Vender más.
           </h2>
