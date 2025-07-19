@@ -14,17 +14,23 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Please enter a valid email address."),
-  country_code: z.string().max(4, "Country code must be at most 4 characters long."),
-  telefono: z.string().min(10, "Phone number must be at least 10 characters long."),
+  country_code: z.string().max(5, "Country code must be at most 5 characters long."),
+  telefono: z.string().min(7, "Phone number must be at least 7 characters long."),
   message: z.string().min(10, "Message must be at least 10 characters long."),
 });
 
 const countries = [
     { value: "+57", label: "🇨🇴 +57" },
-    { value: "+1", label: "🇺🇸 +1" },
     { value: "+52", label: "🇲🇽 +52" },
+    { value: "+1", label: "🇺🇸 +1" },
     { value: "+54", label: "🇦🇷 +54" },
     { value: "+34", label: "🇪🇸 +34" },
+    { value: "+51", label: "🇵🇪 +51" },
+    { value: "+56", label: "🇨🇱 +56" },
+    { value: "+55", label: "🇧🇷 +55" },
+    { value: "+58", label: "🇻🇪 +58" },
+    { value: "+593", label: "🇪🇨 +593" },
+    { value: "+506", label: "🇨🇷 +506" },
   ];
 
 export function Contact() {
