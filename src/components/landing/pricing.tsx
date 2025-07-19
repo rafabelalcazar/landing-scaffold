@@ -7,36 +7,38 @@ import { cn } from "@/lib/utils";
 const pricingTiers = [
   {
     name: "Basic",
-    price: "$29",
-    description: "For individuals and small teams.",
+    price: "$40.000",
+    description: "Plan individual.",
     features: [
-      "Up to 500 contacts",
-      "Basic automation workflows",
-      "Email support",
+      "Hasta 1500 interacciones/mes",
+      "Hasta 50 productos",
+      "Reporte de ventas",
     ],
     isPopular: false,
   },
   {
     name: "Pro",
-    price: "$79",
-    description: "For growing businesses.",
+    price: "$100.000",
+    description: "Para negocios en crecimiento",
     features: [
-      "Up to 5,000 contacts",
-      "Advanced automation",
-      "Lead scoring & analytics",
-      "Priority support",
+      "Hasta to 5000 interacciones/mes",
+      "Hasta 150 productos",
+      "Reporte de ventas",
+      "Soporte priorizado",
     ],
     isPopular: true,
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    description: "For large-scale operations.",
+    name: "Empresarial",
+    price: "Personalizado",
+    description: "Para operaciones a gran escala large-scale operations.",
     features: [
-      "Unlimited contacts",
-      "Custom integrations",
-      "Dedicated account manager",
-      "API Access",
+      "+5000 interacciones",
+      "Estudio de caso",
+      "Integraciones personalizadas",
+      "Reporte de ventas",
+      "Ingeniero de soporte",
+      // "",
     ],
     isPopular: false,
   },
@@ -47,22 +49,22 @@ export function Pricing() {
     <section id="pricing" className="w-full bg-muted py-20 sm:py-24">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">Simple, Transparent Pricing</h2>
+          <h2 className="font-headline text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">Precios simples y claros</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Choose the plan that's right for you. No hidden fees.
+            Elige el plan que se ajusta a ti.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {pricingTiers.map((tier) => (
             <Card key={tier.name} className={cn("flex flex-col", tier.isPopular && "border-primary shadow-lg")}>
               {tier.isPopular && (
-                <div className="py-1.5 px-4 bg-primary text-center text-sm font-semibold text-primary-foreground rounded-t-lg">Most Popular</div>
+                <div className="py-1.5 px-4 bg-primary text-center text-sm font-semibold text-primary-foreground rounded-t-lg">Más Popular</div>
               )}
               <CardHeader className="text-center">
                 <CardTitle className="font-headline text-2xl">{tier.name}</CardTitle>
                 <div className="flex items-baseline justify-center gap-1">
                   <span className="text-4xl font-extrabold tracking-tight">{tier.price}</span>
-                  {tier.name !== "Enterprise" && <span className="text-muted-foreground">/month</span>}
+                  {tier.name !== "Enterprise" && <span className="text-muted-foreground">/mes</span>}
                 </div>
                 <CardDescription>{tier.description}</CardDescription>
               </CardHeader>
@@ -78,7 +80,7 @@ export function Pricing() {
               </CardContent>
               <CardFooter>
                 <Button className="w-full" variant={tier.isPopular ? "default" : "outline"}>
-                  {tier.name === "Enterprise" ? "Contact Sales" : "Get Started"}
+                  {tier.name === "Enterprise" ? "Contact Sales" : "Empezar"}
                 </Button>
               </CardFooter>
             </Card>

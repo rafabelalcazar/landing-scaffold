@@ -104,7 +104,7 @@ export function Contact() {
             {/* <p className="mt-4 text-lg text-muted-foreground">
             Have questions or need a custom solution? Our team is here to help you succeed. Fill out the form, and we'll get back to you as soon as possible.
             </p> */}
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <Image
                 src="https://placehold.co/600x400.png"
                 alt="Contact us"
@@ -113,7 +113,7 @@ export function Contact() {
                 className="rounded-lg object-cover"
                 data-ai-hint="office team"
               />
-            </div>
+            </div> */}
           </div>
           <div className="rounded-lg border bg-card p-4 md:p-8 shadow-sm">
             <Form {...form}>
