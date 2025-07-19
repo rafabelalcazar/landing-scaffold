@@ -42,7 +42,7 @@ export default function TermsPage() {
           
           <h2 className="font-headline text-2xl font-bold text-foreground">5. Cambios</h2>
           <p>
-            Nos reservamos el derecho, a nuestra entera discreción, de modificar o reemplazar estos Térmicos en cualquier momento. Si una revisión es material, intentaremos proporcionar un aviso de al menos 30 días antes de que los nuevos términos entren en vigencia. Lo que constituye un cambio material se determinará a nuestra entera discreción.
+            Nos reservamos el derecho, a nuestra entera discreción, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es material, intentaremos proporcionar un aviso de al menos 30 días antes de que los nuevos términos entren en vigencia. Lo que constituye un cambio material se determinará a nuestra entera discreción.
           </p>
           
           <h2 className="font-headline text-2xl font-bold text-foreground">6. Contáctanos</h2>
