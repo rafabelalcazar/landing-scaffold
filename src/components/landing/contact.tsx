@@ -42,10 +42,13 @@ export function Contact() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="font-headline text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">Get in Touch</h2>
+            <h2 className="font-headline text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">¡Contactanos!</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Have questions or need a custom solution? Our team is here to help you succeed. Fill out the form, and we'll get back to you as soon as possible.
+              Tienes preguntas o necesitas una solución personalizada? Nuestro equipo está aquí para ayudarte. Llena el formulario, y nos pondremos en contacto lo antes posible.
             </p>
+            {/* <p className="mt-4 text-lg text-muted-foreground">
+            Have questions or need a custom solution? Our team is here to help you succeed. Fill out the form, and we'll get back to you as soon as possible.
+            </p> */}
             <div className="mt-8">
               <Image 
                 src="https://placehold.co/600x400.png" 
@@ -65,7 +68,7 @@ export function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel>Nombre</FormLabel>
                       <FormControl>
                         <Input placeholder="John Doe" {...field} />
                       </FormControl>
@@ -78,9 +81,9 @@ export function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email Address</FormLabel>
+                      <FormLabel>Correo</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="you@example.com" {...field} />
+                        <Input type="email" placeholder="tucorreo@example.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -91,15 +94,15 @@ export function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Mensaje</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="How can we help you?" {...field} rows={5} />
+                        <Textarea placeholder="Estoy interesado en el asistente de ventas" {...field} rows={5} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full">Send Message</Button>
+                <Button type="submit" className="w-full">Enviar</Button>
               </form>
             </Form>
           </div>
