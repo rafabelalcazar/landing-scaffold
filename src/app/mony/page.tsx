@@ -28,16 +28,17 @@ export default function MonyPage() {
       <section className="py-20 text-center">
         <div className="container mx-auto max-w-4xl px-4">
           <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl">
-            Mony: Tu Asistente Financiero Personal en WhatsApp
+            ¿Qué es Mony?
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Organiza tus finanzas, controla tus gastos y alcanza tus metas de ahorro sin salir de tu chat. Simple, inteligente y siempre a tu lado.
+          Mony es tu asistente financiero personal, diseñado para personas reales como tú, que quieren organizar su dinero sin complicarse.
+          Olvida las hojas de Excel y las aplicaciones complicadas. Con Mony, solo necesitas WhatsApp para registrar tus ingresos y gastos en segundos, usando texto, audio o foto.
           </p>
-          <Button asChild size="lg" className="mt-8">
+          {/* <Button asChild size="lg" className="mt-8">
             <Link href="/#pricing">
               Empezar con Mony <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-          </Button>
+          </Button> */}
         </div>
       </section>
       
@@ -45,20 +46,20 @@ export default function MonyPage() {
         <div className="container mx-auto max-w-6xl px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 className="font-headline text-4xl font-extrabold">Controla tu dinero sin esfuerzo</h2>
-                    <p className="mt-4 text-muted-foreground">Mony convierte la gestión financiera en una conversación. Olvídate de las hojas de cálculo complicadas y las apps abrumadoras. Solo tienes que chatear con Mony.</p>
+                    <h2 className="font-headline text-4xl font-extrabold">Mony</h2>
+                    <p className="mt-4 text-muted-foreground">Tu Asistente Financiero.</p>
                     <ul className="mt-6 space-y-4">
                         <li className="flex items-start">
                             <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mr-3 mt-1" />
-                            <span><strong>Reportes semanales:</strong> Recibe un resumen de tus finanzas cada semana para mantenerte informado.</span>
+                            <span><strong> Controla tus gastos:</strong> como si hablaras con un amigo, por texto, audio y fotos.</span>
                         </li>
                         <li className="flex items-start">
                             <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mr-3 mt-1" />
-                            <span><strong>Seguridad y Privacidad:</strong> Tus datos financieros están protegidos con encriptación de extremo a extremo.</span>
+                            <span><strong>Solo necesitas WhatsApp.</strong> sin aplicaciones ni herramientas complicadas.   </span>
                         </li>
                         <li className="flex items-start">
                              <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mr-3 mt-1" />
-                            <span><strong>Consejos Personalizados:</strong> Recibe sugerencias para optimizar tus ahorros y mejorar tu salud financiera.</span>
+                            <span><strong>Reportes dinamicos:</strong> Revisa tus movimientos en un reporte dinamico que te permitira llevar el control y seguimiento de tus gastos. </span>
                         </li>
                     </ul>
                 </div>
