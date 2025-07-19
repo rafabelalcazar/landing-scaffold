@@ -83,13 +83,32 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you shortly.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("https://evolution-api-n8n.gw3bpa.easypanel.host/webhook-test/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      toast({
+        title: "¡Mensaje Enviado!",
+        description: "Gracias por contactarnos. Te responderemos en breve.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
@@ -196,7 +215,9 @@ export function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full">Enviar</Button>
+                <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
+                  {form.formState.isSubmitting ? "Enviando..." : "Enviar"}
+                </Button>
               </form>
             </Form>
           </div>

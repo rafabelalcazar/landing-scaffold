@@ -138,7 +138,7 @@ export default function MonyPage() {
           <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3 items-center">
               <div className="md:col-span-1 flex justify-center">
                   <Avatar className="h-48 w-48">
-                      <AvatarImage src="https://placehold.co/300x300.png" alt="Valentina Cifuentes" data-ai-hint="woman portrait professional" />
+                      <AvatarImage src="https://raw.githubusercontent.com/rafabelalcazar/icons/refs/heads/main/img/valen.jpg" alt="Valentina Cifuentes" data-ai-hint="woman portrait professional" className='rounded-full object-cover' />
                       <AvatarFallback>VC</AvatarFallback>
                   </Avatar>
               </div>
