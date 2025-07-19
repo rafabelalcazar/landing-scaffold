@@ -45,8 +45,8 @@ export function Header() {
             Contacto
           </Link>
         </nav>
-        <Button asChild>
-          <Link href="#pricing">Get Started</Link>
+        <Button asChild className="hidden md:inline-flex items-center gap-2 text-sm font-medium " >
+          <Link href="#pricing">Empezar</Link>
         </Button>
       </div>
     </header>
