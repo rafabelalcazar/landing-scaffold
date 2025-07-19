@@ -31,13 +31,13 @@ export function Header() {
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           <Link href="#products" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
-            Products
+            Productos
           </Link>
           <Link href="#pricing" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
-            Pricing
+            Precios
           </Link>
           <Link href="#contact" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
-            Contact
+            Contacto
           </Link>
         </nav>
         <Button asChild>

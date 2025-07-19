@@ -9,12 +9,23 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import Image from "next/image";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Please enter a valid email address."),
+  country_code: z.string().max(4, "Country code must be at most 4 characters long."),
+  telefono: z.string().min(10, "Phone number must be at least 10 characters long."),
   message: z.string().min(10, "Message must be at least 10 characters long."),
 });
+
+const countries = [
+    { value: "+57", label: "🇨🇴 +57" },
+    { value: "+1", label: "🇺🇸 +1" },
+    { value: "+52", label: "🇲🇽 +52" },
+    { value: "+54", label: "🇦🇷 +54" },
+    { value: "+34", label: "🇪🇸 +34" },
+  ];
 
 export function Contact() {
   const { toast } = useToast();
@@ -24,6 +35,8 @@ export function Contact() {
     defaultValues: {
       name: "",
       email: "",
+      country_code: "+57",
+      telefono: "",
       message: "",
     },
   });
@@ -89,6 +102,45 @@ export function Contact() {
                     </FormItem>
                   )}
                 />
+                <div className="flex gap-2">
+                <FormField
+                  control={form.control}
+                  name="country_code"
+                  render={({ field }) => (
+                    <FormItem className="w-1/3">
+                      <FormLabel>Código</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {countries.map((country) => (
+                            <SelectItem key={country.value} value={country.value}>
+                              {country.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                  <FormField
+                    control={form.control}
+                    name="telefono"
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <FormLabel>Teléfono</FormLabel>
+                        <FormControl>
+                          <Input placeholder="3001234567" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                        </FormItem>
+                    )}
+                  />
+                </div>
                 <FormField
                   control={form.control}
                   name="message"
