@@ -85,7 +85,9 @@ export function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await fetch("https://evolution-api-n8n.gw3bpa.easypanel.host/webhook-test/leads", {
+      const newTelefono = values.country_code.replace("+", "") + values.telefono;
+      values.telefono = newTelefono;
+      const response = await fetch("https://evolution-api-n8n.gw3bpa.easypanel.host/webhook/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
