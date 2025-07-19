@@ -116,7 +116,7 @@ export function Contact() {
               />
             </div>
           </div>
-          <div className="rounded-lg border bg-card p-8 shadow-sm">
+          <div className="rounded-lg border bg-card p-4 md:p-8 shadow-sm">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
