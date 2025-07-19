@@ -24,7 +24,6 @@ const countries = [
   { value: "+52", label: "🇲🇽 +52" },
   { value: "+1", label: "🇺🇸 +1" },
   { value: "+54", label: "🇦🇷 +54" }, // Argentina
-  { value: "+34", label: "🇪🇸 +34" }, // España
   { value: "+51", label: "🇵🇪 +51" }, // Perú
   { value: "+56", label: "🇨🇱 +56" }, // Chile
   { value: "+55", label: "🇧🇷 +55" }, // Brasil
